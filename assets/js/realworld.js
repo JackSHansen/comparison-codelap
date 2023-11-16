@@ -8,22 +8,44 @@ nej
 */
 
 
+//const myAnsverInput = document.getElementById('answerOne');
+//const myAnsverButton = document.getElementById('answerButton');
+//const myAnsverFeedbackElement = document.getElementById('answerFeedback');
+
+//myAnsverButton.addEventListener('click', (e) => {
+  //e.preventDefault();
+  /* din kode her. Skriv en alert der skriver "du har svarret rigtigt" hvis svarret er true
+  og "du har svarret forkert" hvis svaret er false*/
+  //let myAnswer = myAnsverInput.value;
+  //console.log('Answer is: ' + myAnswer);
+  //if(myAnswer == 'true') {console.log('du har svarret rigtigt');
+//}
+ // else {
+  //  console.log('du har svarret forkert');
+ // }
+//});
+
+
+/*Opgave 2: udkommenter opgave 1, og omskriv nu din funktion til to korrekte svar:
+nej
+ja i disney film
+*/
+
 const myAnsverInput = document.getElementById('answerOne');
 const myAnsverButton = document.getElementById('answerButton');
 const myAnsverFeedbackElement = document.getElementById('answerFeedback');
 
 myAnsverButton.addEventListener('click', (e) => {
   e.preventDefault();
-  /* din kode her. Skriv en alert der skriver "du har svarret rigtigt" hvis svarret er true
-  og "du har svarret forkert" hvis svaret er false*/
-  let myAnswer = myAnsverInput.value;
-  console.log('Answer is: ' + myAnswer);
+  console.log('click')
+  let myAnswer = myAnsverInput.value.toLowerCase(); // Konverterer input til små bogstaver for at undgå case-sensitivity
+console.log(myAnswer)
+  if (myAnswer === 'nej' || myAnswer === 'ja i disney film') {
+    myAnsverFeedbackElement.textContent = 'Du har svaret rigtigt!';
+  } else {
+    myAnsverFeedbackElement.textContent = 'Du har svaret forkert.';
+  }
 });
-
-/*Opgave 2: udkommenter opgave 1, og omskriv nu din funktion til to korrekte svar:
-nej
-ja i disney film
-*/
 
 
 /*opgave 3: skriv en kode der valider formen med følgende elementer: (denne opgave er på extreme niveau) 
